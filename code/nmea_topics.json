@@ -1,0 +1,121 @@
+{
+    "talker": "PH2S",
+    "header_fields": ["sensor", "time", "date"],
+    "sensors": {
+        "BME688": {
+            "subsystem": "nose",
+            "topic": "h2seas/nose/bme688",
+            "values": [
+                {"name": "Pressure_hPa", "topic": "pressure_hpa"},
+                {"name": "Humidity_RH_pct", "topic": "humidity_pct"},
+                {"name": "Temperature_C", "topic": "temperature_c"},
+                {"name": "VOC_ppm", "topic": "voc_ppm"},
+                {"name": "VSC_ppb", "topic": "vsc_ppb"},
+                {"name": "CO_ppm", "topic": "co_ppm"},
+                {"name": "H2_ppm", "topic": "h2_ppm"}
+            ]
+        },
+        "ENS160": {
+            "subsystem": "nose",
+            "topic": "h2seas/nose/ens160",
+            "values": [
+                {"name": "TVOC_ppb", "topic": "tvoc_ppb"},
+                {"name": "EtOH_ppm", "topic": "etoh_ppm"},
+                {"name": "H2_ppm", "topic": "h2_ppm"},
+                {"name": "Acetone_ppm", "topic": "acetone_ppm"},
+                {"name": "Toluene_ppm", "topic": "toluene_ppm"},
+                {"name": "eCO2_ppm", "topic": "eco2_ppm"},
+                {"name": "AQI_UBA", "topic": "aqi_uba"}
+            ]
+        },
+        "MICS4514": {
+            "subsystem": "nose",
+            "topic": "h2seas/nose/mics4514",
+            "values": [
+                {"name": "CO_ppm", "topic": "co_ppm"},
+                {"name": "NO2_ppm", "topic": "no2_ppm"},
+                {"name": "EtOH_ppm", "topic": "etoh_ppm"},
+                {"name": "H2_ppm", "topic": "h2_ppm"},
+                {"name": "NH3_ppm", "topic": "nh3_ppm"},
+                {"name": "CH4_ppm", "topic": "ch4_ppm"}
+            ]
+        },
+        "SP30": {
+            "subsystem": "nose",
+            "topic": "h2seas/nose/sp30",
+            "values": [
+                {"name": "PM10_ugm3", "topic": "pm10_ugm3"},
+                {"name": "PM2_5_ugm3", "topic": "pm2_5_ugm3"}
+            ]
+        },
+        "ADXL355Z_1": {
+            "subsystem": "vibration",
+            "topic": "h2seas/vibration/adxl355z_1",
+            "values": [
+                {"name": "RMSx_g", "topic": "rms_x_g"},
+                {"name": "RMSy_g", "topic": "rms_y_g"},
+                {"name": "RMSz_g", "topic": "rms_z_g"},
+                {"name": "RMSvec_g", "topic": "rms_vec_g"},
+                {"name": "VDV_ms1_75", "topic": "vdv_ms1_75"},
+                {"name": "Peak_g", "topic": "peak_g"},
+                {"name": "CF", "topic": "cf"}
+            ]
+        },
+        "ADXL355Z_2": {
+            "subsystem": "vibration",
+            "topic": "h2seas/vibration/adxl355z_2",
+            "values": [
+                {"name": "RMSx_g", "topic": "rms_x_g"},
+                {"name": "RMSy_g", "topic": "rms_y_g"},
+                {"name": "RMSz_g", "topic": "rms_z_g"},
+                {"name": "RMSvec_g", "topic": "rms_vec_g"},
+                {"name": "VDV_ms1_75", "topic": "vdv_ms1_75"},
+                {"name": "Peak_g", "topic": "peak_g"},
+                {"name": "CF", "topic": "cf"}
+            ]
+        },
+        "ADXL355Z_3": {
+            "subsystem": "vibration",
+            "topic": "h2seas/vibration/adxl355z_3",
+            "values": [
+                {"name": "RMSx_g", "topic": "rms_x_g"},
+                {"name": "RMSy_g", "topic": "rms_y_g"},
+                {"name": "RMSz_g", "topic": "rms_z_g"},
+                {"name": "RMSvec_g", "topic": "rms_vec_g"},
+                {"name": "VDV_ms1_75", "topic": "vdv_ms1_75"},
+                {"name": "Peak_g", "topic": "peak_g"},
+                {"name": "CF", "topic": "cf"}
+            ]
+        },
+        "ICS43434_1": {
+            "subsystem": "vibration",
+            "topic": "h2seas/vibration/ics43434_1",
+            "values": [
+                {"name": "Audio_RMS_A_norm", "topic": "rms_a_norm"},
+                {"name": "Audio_dB_A_rel", "topic": "db_a_rel"},
+                {"name": "Audio_Peak_A", "topic": "peak_a"},
+                {"name": "Audio_CF_A", "topic": "cf_a"}
+            ]
+        },
+        "ICS43434_2": {
+            "subsystem": "vibration",
+            "topic": "h2seas/vibration/ics43434_2",
+            "values": [
+                {"name": "Audio_RMS_A_norm", "topic": "rms_a_norm"},
+                {"name": "Audio_dB_A_rel", "topic": "db_a_rel"},
+                {"name": "Audio_Peak_A", "topic": "peak_a"},
+                {"name": "Audio_CF_A", "topic": "cf_a"}
+            ]
+        },
+        "ICS43434_3": {
+            "subsystem": "vibration",
+            "topic": "h2seas/vibration/ics43434_3",
+            "values": [
+                {"name": "Audio_RMS_A_norm", "topic": "rms_a_norm"},
+                {"name": "Audio_dB_A_rel", "topic": "db_a_rel"},
+                {"name": "Audio_Peak_A", "topic": "peak_a"},
+                {"name": "Audio_CF_A", "topic": "cf_a"}
+            ]
+        }
+    }
+}
