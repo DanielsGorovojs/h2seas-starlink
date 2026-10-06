@@ -14,12 +14,15 @@ def on_message(client, userdata, message):
         h2seas/nose/sp30/pm10_ugm3 {"time": 1790575560.0, "value": 14.937}
     """
     # The payload arrives as raw bytes; decode() turns it into text
+    data = json2tuple(message.payload.decode())
+    save_point(message.topic, data[0], data[1])
+
     print(message.topic, message.payload.decode())
 
-def json2tuple(json_topic):
+def json2tuple(payload_text):
     decoder = json.decoder.JSONDecoder(parse_float=float)
 
-    data = decoder.decode(json_topic)
+    data = decoder.decode(payload_text)
 
     return (data["time"],data["value"])
 
@@ -29,6 +32,9 @@ def save_point(topic, unix_time, value):
 
     The file name comes from the measurement time (UTC), so points from
     different days end up in different files.
+
+    Columns: topic, unix_time, value. There is no header row on purpose,
+    so every call is a plain append without checking if the file is new.
 
     Example:
         save_point("h2seas/nose/sp30/pm10_ugm3", 1790575560.0, 14.937)
