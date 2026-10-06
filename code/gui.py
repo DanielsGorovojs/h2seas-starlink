@@ -262,21 +262,7 @@ def build_topic_tree(tree, topics):
                  temperature_c   (id "h2seas/nose/bme688/temperature_c")
                  pressure_hpa    (id "h2seas/nose/bme688/pressure_hpa")
     """
-    # TODO (you): for every topic, make sure each level of its path exists in the tree.
-    # For "h2seas/nose/bme688/temperature_c" the nodes to ensure are:
-    #     id "h2seas"                            parent ""   (= tree top level)
-    #     id "h2seas/nose"                       parent "h2seas"
-    #     id "h2seas/nose/bme688"                parent "h2seas/nose"
-    #     id "h2seas/nose/bme688/temperature_c"  parent "h2seas/nose/bme688"
-    # Useful pieces:
-    #     parts = topic.split("/")       -> ["h2seas", "nose", "bme688", "temperature_c"]
-    #     "/".join(parts[:2])            -> "h2seas/nose"   (first 2 parts glued back)
-    #     "/".join(parts[:0])            -> ""              (the top level)
-    #     for i in range(len(parts)):    -> i = 0, 1, 2, 3
-    #     tree.exists(node_id)           -> True if that node was already inserted
-    #     tree.insert(parent_id, "end", iid=node_id, text=parts[i])
-    #                                    -> adds a node under parent_id, shown as text
-    # Think: why do we need tree.exists before inserting?
+
     for topic in topics:
         parts = topic.split("/")
 
